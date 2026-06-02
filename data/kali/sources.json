@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "generated_note": "Curated external sources integrated by reference",
+  "sources": [
+    {
+      "id": "malcolm",
+      "name": "Malcolm",
+      "type": "github",
+      "url": "https://github.com/cisagov/Malcolm",
+      "focus": ["network-traffic-analysis", "pcap", "zeek", "suricata"],
+      "integration": "Reference architecture and workflows for traffic analysis environments."
+    },
+    {
+      "id": "kali-purple",
+      "name": "kali-purple",
+      "type": "gitlab",
+      "url": "https://gitlab.com/kalilinux/kali-purple",
+      "focus": ["defensive-security", "blue-team", "soc"],
+      "integration": "Purple-team and defensive reference distribution components."
+    },
+    {
+      "id": "kalitorify",
+      "name": "kalitorify",
+      "type": "github",
+      "url": "https://github.com/brainfucksec/kalitorify",
+      "focus": ["privacy", "tor", "network-routing"],
+      "integration": "Optional privacy/routing utility integration."
+    },
+    {
+      "id": "errors-ultimate",
+      "name": "ERR0RS-Ultimate",
+      "type": "github",
+      "url": "https://github.com/Gnosisone/ERR0RS-Ultimate",
+      "focus": ["tool-collection", "references"],
+      "integration": "Curated security tool references and links."
+    },
+    {
+      "id": "kali-linux-cheatsheet",
+      "name": "kali-linux-cheatsheet",
+      "type": "github",
+      "url": "https://github.com/NoorQureshi/kali-linux-cheatsheet",
+      "focus": ["cheatsheet", "training"],
+      "integration": "Command quick reference for day-to-day Kali workflows."
+    },
+    {
+      "id": "h4cker",
+      "name": "h4cker",
+      "type": "github",
+      "url": "https://github.com/The-Art-of-Hacking/h4cker",
+      "focus": ["learning", "tooling", "red-team"],
+      "integration": "Knowledge base and security workflow references."
+    },
+    {
+      "id": "theharvester",
+      "name": "theHarvester",
+      "type": "github",
+      "url": "https://github.com/CyberSecurityRepo/theHarvester",
+      "focus": ["osint", "reconnaissance"],
+      "integration": "OSINT and reconnaissance utility reference."
+    },
+    {
+      "id": "centipede",
+      "name": "Centipede",
+      "type": "github",
+      "url": "https://github.com/Personfu/Centipede",
+      "focus": ["writeups", "research"],
+      "integration": "Personal write-ups and applied security notes."
+    },
+    {
+      "id": "yellowkey",
+      "name": "YellowKey",
+      "type": "github",
+      "url": "https://github.com/Personfu/YellowKey",
+      "focus": ["writeups", "methodology"],
+      "integration": "Personal write-ups, methodology, and playbooks."
+    }
+  ]
+}

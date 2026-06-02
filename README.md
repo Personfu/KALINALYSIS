@@ -1,34 +1,49 @@
-# Malcolm
+# KALINALYSIS
 
-![](./docs/images/logo/Malcolm_outline_banner_dark.png)
+KALINALYSIS is the official Kali Linux work repository for this project, designed as a curated hub for:
 
-Malcolm is a powerful network traffic analysis tool suite designed with the following goals in mind:
+- tracking Kali Linux VirtualBox VM releases and updates
+- managing local `.vbox` sample metadata for weekly/updated VM workflows
+- integrating external tooling and write-up sources in a maintainable catalog
 
-* **Easy to use** – Malcolm accepts network traffic data in the form of full packet capture (PCAP) files, Zeek logs, and Suricata alerts. These artifacts can be uploaded via a simple browser-based interface or passively captured live and forwarded to Malcolm using lightweight forwarders. In either case, the data is automatically normalized, enriched, and correlated for analysis.
-* **Powerful traffic analysis** – Visibility into network communications is provided through two intuitive interfaces: OpenSearch Dashboards, a flexible data visualization plugin with dozens of prebuilt dashboards providing an at-a-glance overview of network protocols; and Arkime, a powerful tool for finding and identifying the network sessions comprising suspected security incidents.
-* **Streamlined deployment** – Malcolm operates as a cluster of software containers – isolated sandboxes that each serve a dedicated function of the system. This container-based deployment model, combined with a few simple scripts for setup and run-time management, makes Malcolm suitable to be deployed quickly across a variety of platforms and use cases; whether it be for long-term deployment on a Linux server in a security operations center (SOC) or for incident response on a Macbook for an individual engagement.
-* **Secure communications** – All communications with Malcolm, both from the user interface and from remote log forwarders, are secured with industry standard encryption protocols.
-* **Permissive license** – Malcolm is comprised of several widely used open-source tools, making it an attractive alternative to security solutions requiring paid licenses.
-* **Expanding control systems visibility** – While Malcolm is great for general-purpose network traffic analysis, its creators see a particular need in the community for tools providing insight into protocols used in industrial control systems (ICS) environments. Ongoing Malcolm development will aim to provide additional parsers for common ICS protocols.
+> This repository tracks metadata, URLs, and configuration details only. Kali VM binaries are **not** committed.
 
-Although all the open-source tools that make up Malcolm are already available and in general use, Malcolm provides a framework of interconnectivity that makes it greater than the sum of its parts.
+## Quick Start
 
-In short, Malcolm provides an easily deployable traffic analysis tool suite for network security monitoring.
+```bash
+python scripts/kali/update_kali_catalog.py \
+  --output data/kali/vm-releases.json \
+  --sources data/kali/sources.json \
+  --catalog docs/kali/catalog.md \
+  --vbox-dir samples/vbox
+```
 
-## Documentation
+## Repository Layout
 
-See the [**Malcolm documentation**](docs/README.md).
+- `scripts/kali/update_kali_catalog.py` – update automation
+- `.github/workflows/kali-vm-catalog-update.yml` – scheduled/manual updater
+- `data/kali/vm-releases.json` – machine-readable Kali VM release metadata
+- `data/kali/sources.json` – curated external source inventory
+- `docs/kali/catalog.md` – generated source + release catalog
+- `docs/kali/README.md` – workspace documentation
+- `docs/kali/automation.md` – automation and operational details
+- `templates/kali/vbox-metadata.schema.json` – sample metadata schema
+- `samples/vbox/` – optional local `.vbox` sample inputs
 
-## Share your feedback
+## Curated External Sources
 
-You can help steer Malcolm's development by sharing your ideas and feedback. Please take a few minutes to complete [this survey ↪](https://forms.gle/JYt9QwA5C4SYX8My6) (hosted on Google Forms) so we can understand the members of the Malcolm community and their use cases for this tool.
+- https://github.com/cisagov/Malcolm
+- https://gitlab.com/kalilinux/kali-purple
+- https://github.com/brainfucksec/kalitorify
+- https://github.com/Gnosisone/ERR0RS-Ultimate
+- https://github.com/NoorQureshi/kali-linux-cheatsheet
+- https://github.com/The-Art-of-Hacking/h4cker
+- https://github.com/CyberSecurityRepo/theHarvester
+- https://github.com/Personfu/Centipede
+- https://github.com/Personfu/YellowKey
 
-## <a name="Footer"></a>Copyright and License
+For integration metadata and tags, see `data/kali/sources.json` and generated `docs/kali/catalog.md`.
 
-Malcolm is Copyright 2026 Battelle Energy Alliance, LLC.
+## Automation
 
-Malcolm is licensed under the Apache License, version 2.0. See `LICENSE.txt` for the terms of its release.
-
-## <a name="Contact"></a>Contact information of author(s):
-
-[malcolm@inl.gov](mailto:malcolm@inl.gov?subject=Malcolm)
+The workflow `.github/workflows/kali-vm-catalog-update.yml` runs weekly and on-demand to refresh tracked release metadata and regenerate the catalog.

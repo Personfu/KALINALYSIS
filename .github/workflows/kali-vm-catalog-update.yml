@@ -1,0 +1,35 @@
+name: Kali VM Catalog Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 6 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  update-kali-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update VM manifest and catalog
+        run: |
+          python scripts/kali/update_kali_catalog.py \
+            --output data/kali/vm-releases.json \
+            --sources data/kali/sources.json \
+            --catalog docs/kali/catalog.md \
+            --vbox-dir samples/vbox
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(kali): update VM metadata and catalog'
+          file_pattern: data/kali/vm-releases.json docs/kali/catalog.md

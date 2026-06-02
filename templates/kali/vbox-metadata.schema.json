@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://personfu.github.io/kalinalysis/schemas/vbox-metadata.schema.json",
+  "title": "VirtualBox Sample Metadata",
+  "type": "object",
+  "properties": {
+    "file": {"type": "string"},
+    "machine_name": {"type": ["string", "null"]},
+    "os_type": {"type": ["string", "null"]},
+    "machine_uuid": {"type": ["string", "null"]},
+    "memory_mb": {"type": ["integer", "null"]},
+    "cpu_count": {"type": ["integer", "null"]},
+    "attached_images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {"type": ["string", "null"]},
+          "location": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "error": {"type": "string"}
+  },
+  "required": ["file"],
+  "additionalProperties": false
+}

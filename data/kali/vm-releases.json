@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-02T21:24:11.248128+00:00",
+  "source_url": "https://www.kali.org/get-kali/#kali-virtual-machines",
+  "release_count": 2,
+  "releases": [
+    {
+      "release_id": "kali-linux-2026.2-virtualbox-amd64",
+      "label": "2026.2",
+      "artifacts": [
+        {
+          "type": "7z",
+          "file_name": "kali-linux-2026.2-virtualbox-amd64.7z",
+          "url": "https://cdimage.kali.org/kali-2026.2/kali-linux-2026.2-virtualbox-amd64.7z"
+        },
+        {
+          "type": "sha256sum",
+          "file_name": "kali-linux-2026.2-virtualbox-amd64.sha256sum",
+          "url": "https://cdimage.kali.org/kali-2026.2/kali-linux-2026.2-virtualbox-amd64.sha256sum"
+        }
+      ]
+    },
+    {
+      "release_id": "kali-linux-2026-W22-virtualbox-amd64",
+      "label": "2026-W22",
+      "artifacts": [
+        {
+          "type": "7z",
+          "file_name": "kali-linux-2026-W22-virtualbox-amd64.7z",
+          "url": "https://cdimage.kali.org/kali-weekly/kali-linux-2026-W22-virtualbox-amd64.7z"
+        },
+        {
+          "type": "torrent",
+          "file_name": "kali-linux-2026-W22-virtualbox-amd64.torrent",
+          "url": "https://cdimage.kali.org/kali-weekly/kali-linux-2026-W22-virtualbox-amd64.torrent"
+        }
+      ]
+    }
+  ],
+  "local_vbox_samples": []
+}
