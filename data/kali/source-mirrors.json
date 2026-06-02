@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "workspace_root": "external_sources",
+  "sources": [
+    {
+      "id": "malcolm",
+      "host": "github",
+      "owner": "cisagov",
+      "repo": "Malcolm",
+      "target_dir": "external_sources/malcolm"
+    },
+    {
+      "id": "kali-purple",
+      "host": "gitlab",
+      "project": "kalilinux/kali-purple",
+      "target_dir": "external_sources/kali-purple"
+    },
+    {
+      "id": "kalitorify",
+      "host": "github",
+      "owner": "brainfucksec",
+      "repo": "kalitorify",
+      "target_dir": "external_sources/kalitorify"
+    },
+    {
+      "id": "errors-ultimate",
+      "host": "github",
+      "owner": "Gnosisone",
+      "repo": "ERR0RS-Ultimate",
+      "target_dir": "external_sources/errors-ultimate"
+    },
+    {
+      "id": "kali-linux-cheatsheet",
+      "host": "github",
+      "owner": "NoorQureshi",
+      "repo": "kali-linux-cheatsheet",
+      "target_dir": "external_sources/kali-linux-cheatsheet"
+    },
+    {
+      "id": "h4cker",
+      "host": "github",
+      "owner": "The-Art-of-Hacking",
+      "repo": "h4cker",
+      "target_dir": "external_sources/h4cker"
+    },
+    {
+      "id": "theharvester",
+      "host": "github",
+      "owner": "CyberSecurityRepo",
+      "repo": "theHarvester",
+      "target_dir": "external_sources/theharvester"
+    },
+    {
+      "id": "centipede",
+      "host": "github",
+      "owner": "Personfu",
+      "repo": "Centipede",
+      "target_dir": "external_sources/centipede"
+    },
+    {
+      "id": "yellowkey",
+      "host": "github",
+      "owner": "Personfu",
+      "repo": "YellowKey",
+      "target_dir": "external_sources/yellowkey"
+    },
+    {
+      "id": "kali-nethunter",
+      "host": "github",
+      "owner": "Personfu",
+      "repo": "kali-nethunter",
+      "target_dir": "external_sources/kali-nethunter"
+    }
+  ]
+}

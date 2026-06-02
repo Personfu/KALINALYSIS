@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-02T23:55:56.629282+00:00",
+  "manifest": "data/kali/source-mirrors.json",
+  "plan_only": true,
+  "results": [
+    {
+      "id": "malcolm",
+      "host": "github",
+      "target_dir": "external_sources/malcolm",
+      "repository": "cisagov/Malcolm",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.628914+00:00"
+    },
+    {
+      "id": "kali-purple",
+      "host": "gitlab",
+      "target_dir": "external_sources/kali-purple",
+      "repository": "kalilinux/kali-purple",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.628961+00:00"
+    },
+    {
+      "id": "kalitorify",
+      "host": "github",
+      "target_dir": "external_sources/kalitorify",
+      "repository": "brainfucksec/kalitorify",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629173+00:00"
+    },
+    {
+      "id": "errors-ultimate",
+      "host": "github",
+      "target_dir": "external_sources/errors-ultimate",
+      "repository": "Gnosisone/ERR0RS-Ultimate",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629198+00:00"
+    },
+    {
+      "id": "kali-linux-cheatsheet",
+      "host": "github",
+      "target_dir": "external_sources/kali-linux-cheatsheet",
+      "repository": "NoorQureshi/kali-linux-cheatsheet",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629207+00:00"
+    },
+    {
+      "id": "h4cker",
+      "host": "github",
+      "target_dir": "external_sources/h4cker",
+      "repository": "The-Art-of-Hacking/h4cker",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629221+00:00"
+    },
+    {
+      "id": "theharvester",
+      "host": "github",
+      "target_dir": "external_sources/theharvester",
+      "repository": "CyberSecurityRepo/theHarvester",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629230+00:00"
+    },
+    {
+      "id": "centipede",
+      "host": "github",
+      "target_dir": "external_sources/centipede",
+      "repository": "Personfu/Centipede",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629239+00:00"
+    },
+    {
+      "id": "yellowkey",
+      "host": "github",
+      "target_dir": "external_sources/yellowkey",
+      "repository": "Personfu/YellowKey",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629257+00:00"
+    },
+    {
+      "id": "kali-nethunter",
+      "host": "github",
+      "target_dir": "external_sources/kali-nethunter",
+      "repository": "Personfu/kali-nethunter",
+      "branch": "<default>",
+      "commit": null,
+      "archive_url": null,
+      "status": "planned",
+      "updated_at": "2026-06-02T23:55:56.629271+00:00"
+    }
+  ],
+  "errors": []
+}

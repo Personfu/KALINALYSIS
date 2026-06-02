@@ -1,0 +1,31 @@
+name: Kali Source Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 5 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sync external source mirrors
+        run: |
+          python scripts/kali/sync_external_sources.py
+
+      - name: Commit sync metadata
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(kali): refresh external source sync state'
+          file_pattern: data/kali/source-sync-state.json

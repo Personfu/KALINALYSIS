@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_note": "Curated external sources integrated by reference",
+  "generated_note": "Curated external sources integrated by reference and optional local source mirror",
   "sources": [
     {
       "id": "malcolm",
@@ -73,6 +73,14 @@
       "url": "https://github.com/Personfu/YellowKey",
       "focus": ["writeups", "methodology"],
       "integration": "Personal write-ups, methodology, and playbooks."
+    },
+    {
+      "id": "kali-nethunter",
+      "name": "kali-nethunter",
+      "type": "github",
+      "url": "https://github.com/Personfu/kali-nethunter",
+      "focus": ["mobile-security", "android", "nethunter"],
+      "integration": "Kali NetHunter resources for mobile demonstration and offensive tooling workflows."
     }
   ]
 }

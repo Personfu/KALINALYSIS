@@ -24,6 +24,14 @@ Workflow file: `.github/workflows/kali-vm-catalog-update.yml`
   - `data/kali/vm-releases.json`
   - `docs/kali/catalog.md`
 
+## Source Mirror Automation
+
+Workflow file: `.github/workflows/kali-source-sync.yml`
+
+- Scheduled weekly and supports manual runs
+- Runs `scripts/kali/sync_external_sources.py` to mirror all configured external repositories
+- Writes sync results to `data/kali/source-sync-state.json`
+
 ## Notes
 
 - Parsing is metadata-focused and resilient to minor layout changes by scanning links.

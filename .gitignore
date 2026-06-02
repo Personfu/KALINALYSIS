@@ -56,3 +56,7 @@ __pypackages__/
 *.py[cod]
 *$py.class
 .DS_Store
+
+# locally mirrored external source trees
+/external_sources/*
+!/external_sources/README.md
