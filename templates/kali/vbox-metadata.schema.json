@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Personfu/KALINALYSIS/blob/main/templates/kali/vbox-metadata.schema.json",
+  "title": "VBox Sample Metadata",
+  "description": "Schema for metadata files accompanying .vbox sample inputs in samples/vbox/.",
+  "type": "object",
+  "required": ["id", "kali_version", "vbox_filename", "sha256", "created_at"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this sample, e.g. kali-2024-4-demo-lab-01",
+      "pattern": "^[a-z0-9][a-z0-9\\-]{2,}[a-z0-9]$"
+    },
+    "kali_version": {
+      "type": "string",
+      "description": "Kali Linux version this VM is based on, e.g. 2024.4",
+      "pattern": "^\\d{4}\\.\\d+$"
+    },
+    "vbox_filename": {
+      "type": "string",
+      "description": "Name of the .vbox file in samples/vbox/ (filename only, no path)",
+      "pattern": "\\.vbox$"
+    },
+    "sha256": {
+      "type": "string",
+      "description": "SHA-256 checksum of the .vbox file",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO 8601 timestamp when this sample was created",
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the VM's purpose and configuration"
+    },
+    "vbox_version": {
+      "type": "string",
+      "description": "VirtualBox version this VM was created with",
+      "examples": ["7.0.14", "7.1.0"]
+    },
+    "os_variant": {
+      "type": "string",
+      "description": "Guest OS identifier as reported by VirtualBox",
+      "examples": ["Debian_64", "Debian_arm64"]
+    },
+    "memory_mb": {
+      "type": "integer",
+      "description": "RAM allocated to the VM in megabytes",
+      "minimum": 512,
+      "maximum": 65536
+    },
+    "cpu_count": {
+      "type": "integer",
+      "description": "Number of virtual CPUs allocated",
+      "minimum": 1,
+      "maximum": 32
+    },
+    "disk_size_gb": {
+      "type": "number",
+      "description": "Total virtual disk size in gigabytes",
+      "minimum": 10
+    },
+    "network": {
+      "type": "object",
+      "description": "Network configuration of the VM",
+      "properties": {
+        "adapter_type": {
+          "type": "string",
+          "enum": ["NAT", "Bridged", "Host-Only", "Internal", "NAT Network"],
+          "description": "VirtualBox network adapter type"
+        },
+        "host_only_interface": {
+          "type": "string",
+          "description": "Name of the host-only interface, e.g. vboxnet0",
+          "examples": ["vboxnet0", "vboxnet1"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "installed_tools": {
+      "type": "array",
+      "description": "Notable tools pre-installed beyond the default Kali toolset",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["kalitorify", "theHarvester", "Centipede"]]
+    },
+    "tags": {
+      "type": "array",
+      "description": "Arbitrary categorisation tags",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form notes about this sample (credentials, caveats, demo steps)"
+    }
+  },
+  "examples": [
+    {
+      "id": "kali-2024-4-demo-lab-01",
+      "kali_version": "2024.4",
+      "vbox_filename": "kali-2024-4-demo-lab-01.vbox",
+      "sha256": "a3b8e5f0c2d1e4f6a7b9c0d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2",
+      "created_at": "2026-01-15T10:30:00Z",
+      "description": "Kali 2024.4 lab VM with kalitorify and theHarvester pre-configured for OSINT demos.",
+      "vbox_version": "7.1.0",
+      "os_variant": "Debian_64",
+      "memory_mb": 4096,
+      "cpu_count": 2,
+      "disk_size_gb": 80,
+      "network": {
+        "adapter_type": "Host-Only",
+        "host_only_interface": "vboxnet0"
+      },
+      "installed_tools": ["kalitorify", "theHarvester"],
+      "tags": ["demo", "osint", "lab"],
+      "notes": "Default credentials: kali / kali. Change immediately."
+    }
+  ]
+}

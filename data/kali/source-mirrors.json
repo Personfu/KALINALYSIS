@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "description": "Defines which sources are mirrored locally, how, and where."
+  },
+  "mirrors": [
+    {
+      "source_id": "cisagov-malcolm",
+      "local_path": "external_sources/cisagov-malcolm",
+      "strategy": "shallow",
+      "depth": 1,
+      "branch": "main",
+      "sparse_checkout": false,
+      "post_sync_hook": null,
+      "enabled": true
+    },
+    {
+      "source_id": "kalilinux-kali-purple",
+      "local_path": "external_sources/kalilinux-kali-purple",
+      "strategy": "shallow",
+      "depth": 1,
+      "branch": "main",
+      "sparse_checkout": false,
+      "post_sync_hook": null,
+      "enabled": true
+    },
+    {
+      "source_id": "brainfucksec-kalitorify",
+      "local_path": "external_sources/brainfucksec-kalitorify",
+      "strategy": "full",
+      "depth": null,
+      "branch": "master",
+      "sparse_checkout": false,
+      "post_sync_hook": null,
+      "enabled": true
+    },
+    {
+      "source_id": "noorqureshi-kali-cheatsheet",
+      "local_path": "external_sources/noorqureshi-kali-cheatsheet",
+      "strategy": "full",
+      "depth": null,
+      "branch": "master",
+      "sparse_checkout": false,
+      "post_sync_hook": null,
+      "enabled": true
+    },
+    {
+      "source_id": "cybersecurityrepo-theharvester",
+      "local_path": "external_sources/cybersecurityrepo-theharvester",
+      "strategy": "shallow",
+      "depth": 1,
+      "branch": "master",
+      "sparse_checkout": false,
+      "post_sync_hook": null,
+      "enabled": true
+    },
+    {
+      "source_id": "personfu-centipede",
+      "local_path": "external_sources/personfu-centipede",
+      "strategy": "full",
+      "depth": null,
+      "branch": "main",
+      "sparse_checkout": false,
+      "post_sync_hook": "scripts/kali/hooks/post_sync_centipede.sh",
+      "enabled": true
+    },
+    {
+      "source_id": "personfu-yellowkey",
+      "local_path": "external_sources/personfu-yellowkey",
+      "strategy": "full",
+      "depth": null,
+      "branch": "main",
+      "sparse_checkout": false,
+      "post_sync_hook": null,
+      "enabled": true
+    }
+  ]
+}

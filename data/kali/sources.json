@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "schema_version": "1.1",
+    "last_updated": "2026-06-02T00:00:00Z"
+  },
+  "sources": [
+    {
+      "id": "cisagov-malcolm",
+      "name": "Malcolm (cisagov)",
+      "url": "https://github.com/cisagov/Malcolm",
+      "type": "github",
+      "description": "Full-featured, open source network traffic analysis tool suite capable of processing and presenting PCAP files, Zeek logs, and Suricata alerts. Used as the upstream base for KALINALYSIS infrastructure components.",
+      "tags": ["network", "pcap", "zeek", "suricata", "analysis", "upstream"],
+      "license": "Apache-2.0",
+      "mirror": true,
+      "mirror_depth": "shallow",
+      "last_synced": "2026-05-26T04:00:00Z",
+      "active": true
+    },
+    {
+      "id": "kalilinux-kali-purple",
+      "name": "Kali Purple",
+      "url": "https://gitlab.com/kalilinux/kali-purple",
+      "type": "gitlab",
+      "description": "The official Kali Purple edition repository — Kali Linux's defensive security and SOC-in-a-box distribution built on top of standard Kali. Contains configuration scripts, detection tooling, and SOC framework integrations.",
+      "tags": ["kali", "defensive", "soc", "detection", "official"],
+      "license": "GPL-2.0",
+      "mirror": true,
+      "mirror_depth": "shallow",
+      "last_synced": "2026-05-26T04:00:00Z",
+      "active": true
+    },
+    {
+      "id": "brainfucksec-kalitorify",
+      "name": "kalitorify",
+      "url": "https://github.com/brainfucksec/kalitorify",
+      "type": "github",
+      "description": "Shell script to make Kali Linux transparent proxy through the Tor network. Routes all outgoing traffic through Tor for anonymity during red team assessments.",
+      "tags": ["tor", "proxy", "anonymity", "networking", "shell"],
+      "license": "GPL-3.0",
+      "mirror": true,
+      "mirror_depth": "full",
+      "last_synced": "2026-05-26T04:00:00Z",
+      "active": true
+    },
+    {
+      "id": "gnosisone-errors-ultimate",
+      "name": "ERR0RS-Ultimate",
+      "url": "https://github.com/Gnosisone/ERR0RS-Ultimate",
+      "type": "github",
+      "description": "Multi-tool offensive security framework providing enumeration, exploitation helpers, and post-exploitation modules consolidated into a single menu-driven interface.",
+      "tags": ["offensive", "enum", "exploitation", "post-exploitation", "framework"],
+      "license": "MIT",
+      "mirror": false,
+      "last_synced": null,
+      "active": true
+    },
+    {
+      "id": "noorqureshi-kali-cheatsheet",
+      "name": "Kali Linux Cheatsheet",
+      "url": "https://github.com/NoorQureshi/kali-linux-cheatsheet",
+      "type": "github",
+      "description": "Comprehensive Kali Linux command-line cheatsheet covering tools across all major categories: information gathering, vulnerability analysis, web application testing, password cracking, wireless, and exploitation.",
+      "tags": ["reference", "cheatsheet", "documentation", "kali"],
+      "license": "MIT",
+      "mirror": true,
+      "mirror_depth": "full",
+      "last_synced": "2026-05-26T04:00:00Z",
+      "active": true
+    },
+    {
+      "id": "theartofhacking-h4cker",
+      "name": "h4cker",
+      "url": "https://github.com/The-Art-of-Hacking/h4cker",
+      "type": "github",
+      "description": "Massive collection of hacking and CTF resources compiled by Omar Santos. Covers ethical hacking, CTF walkthroughs, exploit development, forensics, malware analysis, and security research references.",
+      "tags": ["ctf", "reference", "ethical-hacking", "resources", "collection"],
+      "license": "MIT",
+      "mirror": false,
+      "last_synced": null,
+      "active": true
+    },
+    {
+      "id": "cybersecurityrepo-theharvester",
+      "name": "theHarvester",
+      "url": "https://github.com/CyberSecurityRepo/theHarvester",
+      "type": "github",
+      "description": "OSINT tool for gathering emails, subdomains, hosts, employee names, open ports, and banners from different public sources. Essential for early-phase recon in penetration testing engagements.",
+      "tags": ["osint", "recon", "email", "subdomain", "enumeration"],
+      "license": "GPL-2.0",
+      "mirror": true,
+      "mirror_depth": "shallow",
+      "last_synced": "2026-05-26T04:00:00Z",
+      "active": true
+    },
+    {
+      "id": "personfu-centipede",
+      "name": "Centipede",
+      "url": "https://github.com/Personfu/Centipede",
+      "type": "github",
+      "description": "Internal automation tooling for KALINALYSIS workflows. Provides orchestration helpers, data pipeline utilities, and integration glue for combining outputs from multiple security tools.",
+      "tags": ["automation", "internal", "orchestration", "pipeline"],
+      "license": "MIT",
+      "mirror": true,
+      "mirror_depth": "full",
+      "last_synced": "2026-05-26T04:00:00Z",
+      "active": true
+    },
+    {
+      "id": "personfu-yellowkey",
+      "name": "YellowKey",
+      "url": "https://github.com/Personfu/YellowKey",
+      "type": "github",
+      "description": "Key and credential management utilities for lab environments. Provides helpers for rotating secrets, generating SSH/GPG keys in bulk, and managing local Keycloak realm credentials.",
+      "tags": ["crypto", "internal", "key-management", "credentials", "lab"],
+      "license": "MIT",
+      "mirror": true,
+      "mirror_depth": "full",
+      "last_synced": "2026-05-26T04:00:00Z",
+      "active": true
+    }
+  ]
+}
